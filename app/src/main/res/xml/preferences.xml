@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <PreferenceCategory android:title="Performance settings">
+        <in.sureshkumarkv.preferencelib.SliderPreference
+            android:defaultValue="60"
+            android:key="fps"
+            android:summary="Adjust the number of frames drawn per second."
+            android:title="FPS"/>
+
+        <in.sureshkumarkv.preferencelib.SliderPreference
+            android:defaultValue="60"
+            android:key="resolution"
+            android:summary="Adjust the display resolution."
+            android:title="Resolution"/>
+    </PreferenceCategory>
+
+    <PreferenceCategory android:title="Content settings">
+        <in.sureshkumarkv.preferencelib.SpinnerPreference
+            android:defaultValue="0"
+            android:entries="@array/pattern_list"
+            android:key="pattern"
+            android:summary="Choose the pattern to be displayed."
+            android:title="Pattern"/>
+
+        <in.sureshkumarkv.preferencelib.SliderPreference
+            android:defaultValue="50"
+            android:key="speed"
+            android:summary="Choose how fast the animation runs."
+            android:title="Speed"/>
+	</PreferenceCategory>
+
+	<PreferenceCategory android:title="More">
+		<in.sureshkumarkv.preferencelib.ClickPreference
+            android:key="promotion"
+            android:title="My other apps"
+            android:summary="Take a look at my other apps in PlayStore."/>
+	</PreferenceCategory>
+
+    <PreferenceCategory android:title="About">
+        <in.sureshkumarkv.preferencelib.LayoutPreference
+            app:targetLayout="layout_about"
+            app:targetLayoutId="id_swirly_about"
+            android:key="about"/>
+    </PreferenceCategory>
+</PreferenceScreen>
